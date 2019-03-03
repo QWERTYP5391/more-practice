@@ -51,4 +51,40 @@ public class FindMaxNumberTest {
         assertThat(FindMaxNumber.findMaxNumber(s, k), equalTo(expected));
     }
 
+    @Test
+    public void findMaxNumberWith9ZeroCommas() {
+        String s = "9";
+        int k = 0;
+
+        int expected = 9;
+        assertThat(FindMaxNumber.findMaxNumber(s, k), equalTo(expected));
+    }
+
+    @Test
+    public void findMaxNumber9WithOneCommas() {
+        String s = "9";
+        int k = 1;
+
+        int expected = 0;
+        assertThat(FindMaxNumber.findMaxNumber(s, k), equalTo(expected));
+    }
+
+    @Test(expected = NumberFormatException.class)
+    public void findMaxNumberWithNonNumberZeroCommas() {
+        String s = "SSS";
+        int k = 1;
+
+        FindMaxNumber.findMaxNumber(s, k);
+    }
+
+    @Test
+    public void findMaxNumberWith95OneCommas() {
+        String s = "95";
+        int k = 1;
+
+        int expected = 9;
+        assertThat(FindMaxNumber.findMaxNumber(s, k), equalTo(expected));
+    }
+
+
 }
