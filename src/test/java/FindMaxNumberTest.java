@@ -86,5 +86,14 @@ public class FindMaxNumberTest {
         assertThat(FindMaxNumber.findMaxNumber(s, k), equalTo(expected));
     }
 
+    @Test
+    public void findMaxNumberWith950786542654ThreeCommas() {
+        String s = "507869542";
+        int k = 3;
+
+        int expected = 869542;
+        assertThat(FindMaxNumber.findMaxNumber(s, k), equalTo(expected));
+    }
+
 
 }
