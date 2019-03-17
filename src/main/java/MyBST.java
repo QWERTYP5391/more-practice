@@ -1,20 +1,64 @@
-public class MyBST<T> {
+public class MyBST {
 
-    public MyBSTNode<T> head;
+    public MyBSTNode<Integer> head;
 
-    public void insert (T data){
-        MyStack myStack = new MyStack();
-        if(head != null){
+    public void insert(Integer data) {
+        MyStack<MyBSTNode<Integer>> myStack = new MyStack<>();
+        if (head != null) {
             myStack.push(head);
-            int size = myStack.size();
-            while (size != 0){
-                for(int i = 0; i < size; i++){
+            while (myStack.size() != 0) {
+                MyBSTNode<Integer> pop = myStack.pop();
+                Integer current = pop.data;
+                if (current < data) {
+                    MyBSTNode right = pop.right;
+                    if (right == null) {
+                        pop.right = new MyBSTNode<>(null, null, data);
+                    } else {
+                        myStack.push(right);
+                    }
 
                 }
+                if (current > data) {
+                    MyBSTNode left = pop.left;
+                    if (left == null) {
+                        pop.left = new MyBSTNode<>(null, null, data);
+                    } else {
+                        myStack.push(left);
+                    }
+
+                }
+
             }
-        }
-        else{
+
+        } else {
             head = new MyBSTNode<>(null, null, data);
         }
+    }
+
+    public boolean validate() {
+
+        return validateHelper(head, null, null);
+    }
+
+    private boolean validateHelper(MyBSTNode<Integer> node, Integer min, Integer max) {
+
+        if (min != null && node.data < min) {
+            return false;
+        }
+
+        if (max != null && node.data > max) {
+            return false;
+        }
+
+        if (node.left != null && !validateHelper(node.left, min, node.data)) {
+            return false;
+        }
+
+        if (node.right != null && !validateHelper(node.right, node.data, max)) {
+            return false;
+        }
+
+        return true;
+
     }
 }
