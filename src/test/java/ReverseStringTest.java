@@ -12,4 +12,20 @@ public class ReverseStringTest {
 
         assertThat(ReverseString.reverse(input), equalTo(expected));
     }
+
+    @Test
+    public void reverseWithNull() {
+        String input = null;
+        String expected = "";
+
+        assertThat(ReverseString.reverse(input), equalTo(expected));
+    }
+
+    @Test
+    public void reverseWithEmptyString() {
+        String input = "";
+        String expected = "";
+
+        assertThat(ReverseString.reverse(input), equalTo(expected));
+    }
 }

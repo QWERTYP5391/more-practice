@@ -41,6 +41,7 @@ public class MyLinkedList<T> {
 
         if(head.next == null){
             head = null;
+            return;
         }
 
         Node previous = head;

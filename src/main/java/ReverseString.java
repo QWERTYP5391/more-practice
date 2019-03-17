@@ -1,25 +1,24 @@
+
 public class ReverseString {
 
-
-    public static String reverse(String input){
-
-        if(input == null){
+    public static String reverse(String input) {
+        if (input == null || input.isEmpty()) {
             return "";
         }
 
-        int start = 0;
-        int end = input.length() - 1;
-        char[] charArray = input.toCharArray();
+        char[] chars = input.toCharArray();
+        int front = 0;
+        int back = input.length() - 1;
 
-        while (start < end){
-            char temp = charArray[start];
-            charArray[start] = charArray[end];
-            charArray[end] = temp;
-            start++;
-            end--;
+        while (front < back) {
+            char temp = chars[front];
+            chars[front] = chars[back];
+            chars[back] = temp;
+            front++;
+            back--;
         }
 
-        return String.valueOf(charArray);
+        return String.valueOf(chars);
 
     }
 }

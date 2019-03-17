@@ -28,6 +28,14 @@ public class MyLinkedListTest {
 
     @Test
     public void removeLast() {
+        MyLinkedList<Integer> myLinkedList = new MyLinkedList<>();
+        myLinkedList.insertFirst(1);
+        myLinkedList.insertFirst(2);
+        myLinkedList.insertFirst(3);
+
+        myLinkedList.removeLast();
+        assertThat(myLinkedList.getLast().data, equalTo(2));
+
     }
 
     @Test

@@ -9,12 +9,12 @@ public class Tree {
 
 
     public void traverseBS() {
-        Queue queue = new LinkedList();
+        Queue<TreeNode> queue = new LinkedList<>();
 
         queue.add(root);
 
         while (queue.size() != 0) {
-            TreeNode node = (TreeNode) queue.remove();
+            TreeNode node = queue.remove();
             ArrayList<TreeNode> children = node.children;
 
             queue.addAll(children);
