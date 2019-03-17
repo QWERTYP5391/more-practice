@@ -15,7 +15,7 @@ public class MyStack<T> {
         if (size >= 0) {
             T value = data.get(size);
             data.remove(size);
-            size--;
+            this.size--;
             return value;
         }
 
