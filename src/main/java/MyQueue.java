@@ -6,12 +6,12 @@ public class MyQueue<T> {
     private ArrayList<T> data = new ArrayList<T>();
     private int size = 0;
 
-    public void add(T item){
+    public void add(T item) {
         data.add(item);
         size++;
     }
 
-    public T remove(){
+    public T remove() {
         T value = data.get(FIRST);
         data.remove(FIRST);
         size--;
@@ -20,12 +20,12 @@ public class MyQueue<T> {
 
     }
 
-    public T peek(){
+    public T peek() {
         return data.get(FIRST);
 
     }
 
-    public int size(){
+    public int size() {
         return size;
     }
 }

@@ -4,17 +4,16 @@ public class Palindrome {
         if(input == null || input.length() < 1){
             return false;
         }
-        int differences = 0;
         int start = 0;
         int end = input.length() - 1;
 
         while(start < end){
             if(input.charAt(start) != input.charAt(end)){
-                differences++;
+                return false;
             }
             start++;
             end--;
         }
-        return differences < 1;
+        return true;
     }
 }

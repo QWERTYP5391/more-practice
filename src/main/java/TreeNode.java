@@ -14,7 +14,7 @@ public class TreeNode {
         children.add(data);
     }
 
-    public Object remove(Object data){
+    public boolean remove(Object data){
         return children.remove(data);
     }
 }
