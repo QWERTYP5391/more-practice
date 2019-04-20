@@ -46,10 +46,6 @@ public class Anagrams {
     }
 
     private static boolean isNullOrEmpty(String input) {
-        if (input == null || input.length() < 1) {
-            return true;
-        }
-
-        return false;
+        return input == null || input.length() < 1;
     }
 }
