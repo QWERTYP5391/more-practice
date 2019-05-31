@@ -39,7 +39,7 @@ public class MyLinkedList<T> {
             return;
         }
 
-        if(head.next == null){
+        if (head.next == null) {
             head = null;
             return;
         }
@@ -47,7 +47,7 @@ public class MyLinkedList<T> {
         Node previous = head;
         Node node = head.next;
 
-        while(node.next != null){
+        while (node.next != null) {
             previous = node;
             node = node.next;
         }
@@ -69,11 +69,11 @@ public class MyLinkedList<T> {
         return value;
     }
 
-    public Node getMiddle(){
+    public Node getMiddle() {
         Node slow = head;
         Node fast = head.next;
 
-        while (fast != null && fast.next != null){
+        while (fast != null && fast.next != null) {
             slow = slow.next;
             fast = fast.next.next;
         }
@@ -82,12 +82,12 @@ public class MyLinkedList<T> {
 
     }
 
-    public boolean isCycle(){
+    public boolean isCycle() {
         Node slow = head;
         Node fast = head.next;
 
-        while (fast != null && fast.next != null){
-            if(slow == fast){
+        while (fast != null && fast.next != null) {
+            if (slow == fast) {
                 return true;
             }
             slow = slow.next;
