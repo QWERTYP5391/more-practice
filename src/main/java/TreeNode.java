@@ -1,20 +1,20 @@
 import java.util.ArrayList;
 
-public class TreeNode {
+public class TreeNode<T> {
 
-    public Object data;
+    public T data;
     public ArrayList<TreeNode> children;
 
-    public TreeNode(Object data, ArrayList<TreeNode> children){
+    public TreeNode(T data, ArrayList<TreeNode> children){
         this.data = data;
         this.children = children;
     }
 
-    public void add(TreeNode data){
+    public void add(TreeNode<T> data){
         children.add(data);
     }
 
-    public boolean remove(Object data){
+    public boolean remove(T data){
         return children.remove(data);
     }
 }
