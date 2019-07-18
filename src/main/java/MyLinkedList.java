@@ -3,7 +3,7 @@ public class MyLinkedList<T> {
     public Node<T> head = null;
 
     public void insertFirst(T item) {
-        head = new Node(item, head);
+        head = new Node<>(item, head);
 
     }
 
