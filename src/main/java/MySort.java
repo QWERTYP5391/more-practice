@@ -9,9 +9,7 @@ public class MySort {
                 }
             }
         }
-
         return array;
-
     }
 
 
@@ -24,7 +22,6 @@ public class MySort {
         int temp = array[j];
         array[j] = array[i];
         array[i] = temp;
-
     }
 }
 

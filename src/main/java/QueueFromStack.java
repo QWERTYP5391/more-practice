@@ -20,9 +20,6 @@ public class QueueFromStack <T>{
         }
 
         return result;
-
-
-
     }
 
     public T peek(){

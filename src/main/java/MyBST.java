@@ -10,26 +10,22 @@ public class MyBST {
                 MyBSTNode<Integer> pop = myStack.pop();
                 Integer current = pop.data;
                 if (current < data) {
-                    MyBSTNode right = pop.right;
+                    MyBSTNode<Integer> right = pop.right;
                     if (right == null) {
                         pop.right = new MyBSTNode<>(null, null, data);
                     } else {
                         myStack.push(right);
                     }
-
                 }
                 if (current > data) {
-                    MyBSTNode left = pop.left;
+                    MyBSTNode<Integer> left = pop.left;
                     if (left == null) {
                         pop.left = new MyBSTNode<>(null, null, data);
                     } else {
                         myStack.push(left);
                     }
-
                 }
-
             }
-
         } else {
             head = new MyBSTNode<>(null, null, data);
         }
@@ -54,11 +50,6 @@ public class MyBST {
             return false;
         }
 
-        if (node.right != null && !validateHelper(node.right, node.data, max)) {
-            return false;
-        }
-
-        return true;
-
+        return node.right == null || validateHelper(node.right, node.data, max);
     }
 }

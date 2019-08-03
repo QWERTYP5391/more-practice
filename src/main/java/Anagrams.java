@@ -2,22 +2,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
-
 public class Anagrams {
-
 
     public static boolean isAnagram(String input, String input2) {
         if (isNullOrEmpty(input) || isNullOrEmpty(input2)) {
             return false;
         }
 
-
         Map<Character, Integer> characterOneMap = new HashMap<>();
         Map<Character, Integer> characterTwoMap = new HashMap<>();
 
-
         loadCharacterMap(input, characterOneMap);
-
         loadCharacterMap(input2, characterTwoMap);
 
         Set<Character> charactersOne = characterOneMap.keySet();
@@ -27,17 +22,14 @@ public class Anagrams {
             return false;
         }
 
-
         for (Character character : charactersOne) {
             if (!characterOneMap.get(character).equals(characterTwoMap.get(character))) {
                 return false;
             }
         }
 
-
         return true;
     }
-
 
     private static void loadCharacterMap(String input, Map<Character, Integer> characterOneMap) {
         for (char character : input.replaceAll("[^\\w\\s]", "").toLowerCase().toCharArray()) {

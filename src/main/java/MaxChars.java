@@ -18,7 +18,6 @@ public class MaxChars {
                 max = count;
                 result = key;
             }
-
         }
 
         return result;

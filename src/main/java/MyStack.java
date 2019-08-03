@@ -20,8 +20,6 @@ public class MyStack<T> {
         }
 
         return null;
-
-
     }
 
     public T peek() {

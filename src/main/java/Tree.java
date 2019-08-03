@@ -7,7 +7,6 @@ public class Tree {
 
     public TreeNode root = null;
 
-
     public void traverseBS() {
         Queue<TreeNode> queue = new LinkedList<>();
 

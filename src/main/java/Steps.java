@@ -18,6 +18,5 @@ public class Steps {
             }
             System.out.println(columnString);
         }
-
     }
 }

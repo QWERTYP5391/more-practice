@@ -17,7 +17,7 @@ public class ArrayChunk {
         int slice = 0;
 
         while (index < rows) {
-            int to = slice + size < length ? slice + size : length;
+            int to = Math.min(slice + size, length);
             ints[index] = Arrays.copyOfRange(array, slice, to);
             slice += size;
             index++;

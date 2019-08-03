@@ -8,6 +8,5 @@ public class ReverseInteger {
         }
 
         return i;
-
     }
 }
