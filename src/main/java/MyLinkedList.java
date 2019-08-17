@@ -53,8 +53,6 @@ public class MyLinkedList<T> {
         }
 
         previous.next = null;
-
-
     }
 
     public int size() {

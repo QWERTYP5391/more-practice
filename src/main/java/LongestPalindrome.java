@@ -18,8 +18,7 @@ public class LongestPalindrome {
                     back--;
                 } else {
                     String subString = s.substring(front, back + 1);
-                    String reducedSubString = subString.substring(1, subString.length() - 1);
-                    if (subString.length() > longestPalindrome.length() && Palindrome.isPalindrome(reducedSubString)) {
+                    if (subString.length() > longestPalindrome.length() && Palindrome.isPalindrome(subString)) {
                         longestPalindrome = subString;
                         break;
                     } else {

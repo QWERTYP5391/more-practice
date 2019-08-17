@@ -1,13 +1,10 @@
 public class Palindrome {
 
     public static boolean isPalindrome(String input) {
-        if (input == null) {
+        if (input == null || input.length() < 1) {
             return false;
         }
 
-        if (input.length() <= 1) {
-            return true;
-        }
         int start = 0;
         int end = input.length() - 1;
 

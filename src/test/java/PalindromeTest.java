@@ -24,7 +24,7 @@ public class PalindromeTest {
     @Test
     public void testIsPalindromeEmptyString() {
         String input = "";
-        assertTrue(Palindrome.isPalindrome(input));
+        assertFalse(Palindrome.isPalindrome(input));
     }
 
 }
