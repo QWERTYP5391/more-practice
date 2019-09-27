@@ -65,7 +65,7 @@ public class LongestPalindrome2 {
         String value;
         int index;
 
-        public Node(String value, int index) {
+        Node(String value, int index) {
             this.value = value;
             this.index = index;
         }
