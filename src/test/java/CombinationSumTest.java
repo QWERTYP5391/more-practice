@@ -1,6 +1,8 @@
 import org.junit.Test;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 import static org.hamcrest.core.IsEqual.equalTo;
@@ -12,6 +14,6 @@ public class CombinationSumTest {
     public void combinationSum() {
         List<List<Integer>> combinationSum = CombinationSum.combinationSum(new int[]{2, 3, 6, 7}, 7);
 
-        assertEquals(Arrays.asList(new int[][]{{7}, {2, 2, 3}}), combinationSum);
+        assertEquals(Arrays.asList(Arrays.asList(2,2,3), Collections.singletonList(7)), combinationSum);
     }
 }
