@@ -13,4 +13,13 @@ public class MySortTest {
 
         assertThat(MySort.bubbleSort(input), equalTo(expected));
     }
+
+    @Test
+    public void mergeSort() {
+        int [] input = {3, 6, 1, 9};
+        int [] expected = {1, 3, 6, 9};
+
+
+        assertThat(MySort.mergeSort(input), equalTo(expected));
+    }
 }
