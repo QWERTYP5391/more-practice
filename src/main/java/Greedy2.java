@@ -14,17 +14,14 @@ public class Greedy2 {
         List<List<Integer>> list = solution.nearestVegetarianRestaurant(3, problem, 1);
     }
 
-    // CLASS BEGINS, THIS CLASS IS REQUIRED
     public static class Solution {
         public Solution() {
 
         }
 
-        // METHOD SIGNATURE BEGINS, THIS METHOD IS REQUIRED
         public List<List<Integer>> nearestVegetarianRestaurant(int totalRestaurants,
                                                                List<List<Integer>> allLocations,
                                                                int numRestaurants) {
-            // WRITE YOUR CODE HERE
             List<DistanceCoordinates> distances = new ArrayList<>();
             List<List<Integer>> result = new ArrayList<>();
             for (List<Integer> coordinates : allLocations) {
@@ -47,9 +44,6 @@ public class Greedy2 {
             double squared = Math.pow(xCoordinate, 2) + Math.pow(yCoordinate, 2);
             return Math.sqrt(squared);
         }
-        // METHOD SIGNATURE ENDS
-
-
     }
 
     static class DistanceCoordinates implements Comparable<DistanceCoordinates> {

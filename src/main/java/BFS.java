@@ -1,18 +1,14 @@
-// IMPORT LIBRARY PACKAGES NEEDED BY YOUR PROGRAM
-// SOME CLASSES WITHIN A PACKAGE MAY BE RESTRICTED
-// DEFINE ANY CLASS AND METHOD NEEDED
+
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Queue;
 
-// CLASS BEGINS, THIS CLASS IS REQUIRED
 public class BFS {
 
     private static final int OBSTACLE = 9;
 
-    // METHOD SIGNATURE BEGINS, THIS METHOD IS REQUIRED
     int removeObstacle(int numRows, int numColumns, List<List<Integer>> lot) {
         // WRITE YOUR CODE HERE
         boolean[][] visited = new boolean[numRows][numColumns];
@@ -21,7 +17,6 @@ public class BFS {
         return distanceHelper(lot, queue, visited);
     }
 
-    // METHOD SIGNATURE ENDS
     private int distanceHelper(List<List<Integer>> lot, Queue<Node> queue, boolean[][] visited) {
         while (!queue.isEmpty()) {
             Node node = queue.remove();
@@ -54,7 +49,7 @@ public class BFS {
             directions.add(new Node(node.row, node.column + 1, lot.get(node.row).get(node.column + 1), node.distance + 1));
         }
 
-        if (node.row < lot.size() - 1 && node.column - 1 >= 0 && node.column - 1 < lot.get(0).size() && !lot.get(node.row).get(node.column - 1).equals(0) && !visited[node.row][node.column - 1]) {
+        if (node.row < lot.size() && node.column - 1 >= 0 && node.column - 1 < lot.get(0).size() && !lot.get(node.row).get(node.column - 1).equals(0) && !visited[node.row][node.column - 1]) {
             visited[node.row][node.column - 1] = true;
             directions.add(new Node(node.row, node.column - 1, lot.get(node.row).get(node.column - 1), node.distance + 1));
         }
