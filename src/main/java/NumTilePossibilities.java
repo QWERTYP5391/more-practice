@@ -18,9 +18,6 @@ public class NumTilePossibilities {
 
     private static void getPossibilities(String prefix, String suffix) {
 
-        String charAt = String.valueOf(suffix.charAt(0));
-        String str = suffix.replace(String.valueOf(suffix.charAt(0)), "");
-
         if (prefix.length() != 0) {
             result.add(prefix);
         }

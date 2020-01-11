@@ -1,6 +1,5 @@
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Set;
 
 public class Anagrams {
 
@@ -15,20 +14,7 @@ public class Anagrams {
         loadCharacterMap(input, characterOneMap);
         loadCharacterMap(input2, characterTwoMap);
 
-        Set<Character> charactersOne = characterOneMap.keySet();
-        Set<Character> charactersTwo = characterTwoMap.keySet();
-
-        if (charactersOne.size() != charactersTwo.size()) {
-            return false;
-        }
-
-        for (Character character : charactersOne) {
-            if (!characterOneMap.get(character).equals(characterTwoMap.get(character))) {
-                return false;
-            }
-        }
-
-        return true;
+        return characterOneMap.equals(characterTwoMap);
     }
 
     private static void loadCharacterMap(String input, Map<Character, Integer> characterOneMap) {
