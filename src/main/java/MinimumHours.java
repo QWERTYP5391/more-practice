@@ -2,7 +2,7 @@
 import java.util.List;
 
 public class MinimumHours {
-    private static int fileCount = 0;
+    protected static int fileCount = 0;
 
     static int minimumHours(int rows, int columns, List<List<Integer>> grid) {
         boolean[][] visited = new boolean[rows][columns];

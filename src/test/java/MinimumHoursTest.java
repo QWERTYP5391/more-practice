@@ -1,3 +1,4 @@
+import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -7,6 +8,10 @@ import static org.hamcrest.CoreMatchers.equalTo;
 import static org.junit.Assert.*;
 
 public class MinimumHoursTest {
+    @Before
+    public void setUp() throws Exception {
+        MinimumHours.fileCount = 0;
+    }
 
     @Test
     public void minimumHours() {
